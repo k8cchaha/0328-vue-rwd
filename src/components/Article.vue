@@ -14,7 +14,7 @@
 export default {};
 </script>
 
-<style>
+<style lang="scss">
 article {
   width: 100%;
   height: 578px;
@@ -25,16 +25,36 @@ article {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
-article > div > h3 {
-  text-align: center;
-  font-size: 48px;
-  color: #fff;
-}
-article > div > p {
-  text-align: center;
-  font-size: 14px;
-  color: #fff;
-  line-height: 3em;
+  @media screen and (max-width: 730px) {
+    height: 349px;
+  }
+  @media screen and (max-width: 640px) {
+    height: 175px;
+  }
+  > div {
+    @media screen and (max-width: 1044px) {
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+    }
+    > h3 {
+      text-align: center;
+      font-size: 48px;
+      color: #fff;
+      @media screen and (max-width: 1044px) {
+        font-size: 30px;
+      }
+    }
+    > p {
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+      line-height: 3em;
+      @media screen and (max-width: 1044px) {
+        font-size: 14px;
+        line-height: 25px;
+      }
+    }
+  }
 }
 </style>
