@@ -1,8 +1,8 @@
 <template>
-  <header>
+  <header :class="{ openMenu: isOpen }">
     <nav>
       <h1>Alex</h1>
-      <a id="moblie_menu" href="javascript:;"></a>
+      <a id="moblie_menu" @click="handleMenuOpen" href="javascript:;"></a>
       <div>
         <a href="javascript:;">RWD</a>
         <a href="javascript:;">VUEJS</a>
@@ -15,7 +15,16 @@
 </template>
 
 <script>
-export default {};
+import { ref } from "@vue/reactivity";
+export default {
+  setup() {
+    const isOpen = ref(false);
+    const handleMenuOpen = () => {
+      isOpen.value = !isOpen.value;
+    };
+    return { isOpen, handleMenuOpen };
+  },
+};
 </script>
 
 <style lang="scss">
