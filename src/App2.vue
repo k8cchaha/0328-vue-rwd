@@ -1,23 +1,15 @@
 <template>
   <Header />
-  <Article />
-  <Aside />
-  <Main />
+  <router-view></router-view>
   <Footer />
 </template>
 
 <script>
 import Header from "./components/Header.vue";
-import Article from "./components/Article.vue";
-import Aside from "./components/Aside.vue";
-import Main from "./components/Main.vue";
 import Footer from "./components/Footer.vue";
 export default {
   components: {
     Header,
-    Article,
-    Aside,
-    Main,
     Footer,
   },
 };
