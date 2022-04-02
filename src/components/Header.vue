@@ -1,9 +1,10 @@
 <template>
   <header :class="{ openMenu: isOpen }">
     <nav>
-      <h1>Alex</h1>
+      <router-link to="/" class="Title">Alex</router-link>
       <a id="moblie_menu" @click="handleMenuOpen" href="javascript:;"></a>
       <div>
+        <router-link to="/rwd">RWD</router-link>
         <a href="javascript:;">RWD</a>
         <a href="javascript:;">VUEJS</a>
         <a href="javascript:;">REACTJS</a>
@@ -52,7 +53,7 @@ header {
       width: 100%;
       height: 232px;
     }
-    > h1 {
+    > .Title {
       line-height: 97px;
       font-size: 18px;
       float: left;
